@@ -1,7 +1,8 @@
 
 const fetch = require('node-fetch')
 
-function check(url, invocationParameters,  expectedResultData, expectedResultStatus) {
+
+async  function check(url, invocationParameters,  expectedResultData, expectedResultStatus) {
 
     const checkResult = { // this is the object you need to set and return
         urlChecked: url,
