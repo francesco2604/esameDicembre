@@ -13,6 +13,15 @@ function check(url, invocationParameters,  expectedResultData, expectedResultSta
 
 
 
+        const check_response = await fetch('http://localhost:5000/counts'+'?lato1='+invocationParameters.lato1+'&lato2='+invocationParameters.lato2 ,{
+                        headers: {
+                            'Accept' : 'application/json',
+                        }
+                    })
+    console.log(Object.keys(invocationParameters))
+                    const chec_json = await check_response.json()
+                    console.log(chec_json)
+          return chec_json
 }
 
 
